@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./assets/index.css"
   </head>
   <body>
-    <div class="container">
+    <!-- Displays the welcome message, start button, and highscores button -->
+    <div class="container" id="homepage">
       <h1>JavaScript Quiz!</h1>
       <p>
         Take this quiz to test your knowledge of JavaScript. Correct answers
@@ -18,5 +19,13 @@
       <button id="start-game" onclick="startGame()">Start Game</button>
       <button id="highscores" onclick="highscores()">View Highscores</button>
     </div>
+
+    <!-- Hides questions until the game has started. -->
+    <div id="questions" class="hide">
+      <p id="question-el">Questions will go here</p>
+      <button id="choices">Choices here</button>
+    </div>
+
+    <script src="./assets/js/game.js"></script>
   </body>
 </html>
