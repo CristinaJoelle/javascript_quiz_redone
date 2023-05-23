@@ -3,7 +3,7 @@ let questions = [
   {
     question: "Which comparison operator is used to show values are NOT equal?",
     choices: ["==", ">", ">=", "!="],
-    answer: 4,
+    answer: "!=",
   },
   {
     question: "How would you write 'Hello World' in the console?",

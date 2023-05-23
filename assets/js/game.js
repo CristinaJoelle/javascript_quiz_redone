@@ -42,7 +42,7 @@ function getQuestion() {
     let currentChoices = currentQuestion.choices[i];
     let choicesBtn = document.createElement("button");
     choicesBtn.setAttribute("class", "currentChoices");
-    choicesBtn.setAttribute("class", currentChoices);
+    choicesBtn.setAttribute("value", currentChoices);
     choicesBtn.textContent = i + 1 + ". " + currentChoices;
 
     choicesEl.appendChild(choicesBtn);
@@ -50,14 +50,14 @@ function getQuestion() {
 }
 
 //Function to see if a correct answer was chosen or not.
-function questionAnswer(event) {
-  let selectedChoice = event.target;
-
-  //If wrong answer is selected the player is penalized 5 seconds.
-  if (selectedChoice.value !== questions[currentQuestionArray].answer) {
-    time -= 5;
+function checkAnswer(selectedChoice) {
+  if (selectedChoice === questions[currentQuestionArray].answer) {
+    console.log("correct");
+  } else {
+    console.log("false");
   }
 }
+
 function endQuiz() {
   console.log("You finished!");
 }
